@@ -14,9 +14,9 @@ function onDeviceReady() {
     // Initialize your tables
     db.transaction(function(tx) {
         // user Management Tables
-        tx.executeSql('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY NOT NULL AUTOINCREMENT, ' + 
+        tx.executeSql('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, ' + 
             'username TEXT NOT NULL, password TEXT NOT NULL, role TEXT NOT NULL, date_registered DATETIME, ' +
-            'date_updated DATETIME DEFAULT CURRENT_TIMESTAMP');
+            'date_updated DATETIME DEFAULT CURRENT_TIMESTAMP)');
 
         tx.executeSql('CREATE TABLE IF NOT EXISTS citizen (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
             'user_id INTEGER NOT NULL, spouse_id INTEGER, firstname TEXT NOT NULL, lastname TEXT NOT NULL, ' +

@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS user (
+    id INTEGER PRIMARY AUTOINCREMENT KEY NOT NULL,
+    username TEXT NOT NULL, 
+    password TEXT NOT NULL, 
+    role TEXT NOT NULL, 
+    date_registered DATETIME,
+    date_updated DATETIME DEFAULT CURRENT_TIMESTAMP)
