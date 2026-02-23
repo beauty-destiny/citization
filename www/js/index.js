@@ -24,6 +24,6 @@ function onDeviceReady() {
             'district TEXT NOT NULL, treditional_authority TEXT, date_registered DATETIME NOT NULL, ' +
             'date_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP)');
     }, function(error) {
-        alert("Initialization Error! : " + error.message);
+        alert("Database creation Error! : " + error.message);
     });
 }
